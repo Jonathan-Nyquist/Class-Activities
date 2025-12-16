@@ -46,3 +46,45 @@ On the graph paper provided, you will plot the frequency distribution, which is 
 | 7 | 9 | 9 | 9 | 5 | 9 | 9 | 10 | 6 | 9 |
 
 ![Graph your data here](images/small_graph_paper.png){width=80%}
+
+What you have just created is a data histogram, a way to visualize the distribution of a data sample. Once you learn some Python coding, you’ll no longer have to plot these by hand. (And there was much rejoicing.)
+
+**Based on your histogram, what is the most likely sum when you roll two dice?**
+\vspace{1cm}
+
+**Least likely?**
+\vspace{1cm}
+
+Here’s the histogram from a 10,000-roll simulation, which now closely matches the expected probability distribution for the sum of two fair dice. 
+
+![Histogram for 10,000 rolls](images/hist10_000.png)
+
+Based on a simulation of 10,000 rolls, the most likely sum is 7.
+\clearpage
+
+## Discussion Questions
+When you rolled two dice, you were no longer working with a uniform distribution. **What changed between rolling one die and rolling two dice?**
+\vspace{1.5cm}
+
+Look at your hand-drawn frequency histogram. **Are the peaks more reliable than the tails, or vice versa?**
+\vspace{1.5cm}
+
+Your histogram might not show 7 as the most frequent outcome, even though the 10,000-roll simulation does.
+**Does that mean your data contradicts probability theory?**
+\vspace{1.5cm}
+
+
+**What would it mean, statistically, to say your result is “wrong”?**
+\vspace{1.5cm}
+
+
+Suppose you repeated this activity with:
+
+* 30 rolls
+* 300 rolls
+* 3,000 rolls
+
+**At which point would you feel comfortable predicting the most likely sum for future rolls? Why?**
+\vspace{1cm}
+
+**This activity is about dice — but what other kinds of real data behave similarly?**  Consider, for example, medical trials, or polling data.
