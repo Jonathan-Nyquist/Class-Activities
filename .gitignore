@@ -1,0 +1,32 @@
+# Quarto build artifacts
+.quarto/
+*_files/
+*.html
+*.pdf
+*.docx
+*.pptx
+*.quarto_ipynb
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code (keep settings if desired)
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# macOS
+.DS_Store
+
+# LaTeX aux files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz

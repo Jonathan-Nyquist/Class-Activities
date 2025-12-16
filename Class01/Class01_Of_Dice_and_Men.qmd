@@ -1,0 +1,78 @@
+---
+title: "Honors Class01 Activity: Of Dice and Men"
+jupyter: datascience
+format:
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+---
+## Team Members: _____________________________________
+## _______________________________________________
+
+Each team will receive a pair of dice. Roll the dice 50 times and record the total for each roll in the table on the back of this page along with the running grand total.
+
+1. Grand  total  of all 50 rolls here: _____________________
+
+2. Divide the sum by 50 to calculate the average: ____________________
+
+3. What is the expected value of the average?  Explain.\newline
+\vspace{1cm}
+
+4. How much does your average differ from this expected value? ______________
+
+5. Do you think this difference is plausible given you only rolled the dice 50 times?
+\vspace{1cm}
+
+6. If you wanted to be very confident the dice were fair, how many rolls would you want to do? Explain your reasoning (even if it’s not exact math).
+\vspace{1cm} 
+
+7. The probability of rolling a 12  is 1/36. Out of 50 rolls, how many 12s would you expect on average? 
+\vspace{1cm} 
+
+8. How many 12s did you roll and does this seem to be in agreement with the odds?
+\vspace{1cm} 
+
+9. Suppose a classmate claims your dice are unfair because you didn’t get any 12s. What evidence would you use to argue for or against this claim?
+\vspace{1cm} 
+
+10. Based on this activity, write one sentence that summarizes what you learned about randomness and averages.
+\vspace{1cm}
+
+\newpage
+\vfill
+\renewcommand{\arraystretch}{1.8}
+\begin{center}
+\begin{tabular}{|r|c|c||r|c|c|}
+\hline
+\textbf{Roll \#} & \textbf{Dice Sum} & \textbf{Running Total} &
+\textbf{Roll \#} & \textbf{Dice Sum} & \textbf{Running Total} \\
+\hline
+1  &  &  & 26 &  &  \\ \hline
+2  &  &  & 27 &  &  \\ \hline
+3  &  &  & 28 &  &  \\ \hline
+4  &  &  & 29 &  &  \\ \hline
+5  &  &  & 30 &  &  \\ \hline
+6  &  &  & 31 &  &  \\ \hline
+7  &  &  & 32 &  &  \\ \hline
+8  &  &  & 33 &  &  \\ \hline
+9  &  &  & 34 &  &  \\ \hline
+10 &  &  & 35 &  &  \\ \hline
+11 &  &  & 36 &  &  \\ \hline
+12 &  &  & 37 &  &  \\ \hline
+13 &  &  & 38 &  &  \\ \hline
+14 &  &  & 39 &  &  \\ \hline
+15 &  &  & 40 &  &  \\ \hline
+16 &  &  & 41 &  &  \\ \hline
+17 &  &  & 42 &  &  \\ \hline
+18 &  &  & 43 &  &  \\ \hline
+19 &  &  & 44 &  &  \\ \hline
+20 &  &  & 45 &  &  \\ \hline
+21 &  &  & 46 &  &  \\ \hline
+22 &  &  & 47 &  &  \\ \hline
+23 &  &  & 48 &  &  \\ \hline
+24 &  &  & 49 &  &  \\ \hline
+25 &  &  & 50 &  &  \\ \hline
+\end{tabular}
+\end{center}
+\vfill
