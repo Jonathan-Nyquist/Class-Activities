@@ -1,0 +1,75 @@
+---
+title: "Honors Class03 Activity: PEMBAS and Modules"
+jupyter: datascience
+format:
+  html:
+    css: class03-math-print.css
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+header-includes:
+  - |
+    % Enlarge math fonts relative to body text (~150%)
+    \makeatletter
+    \DeclareMathSizes{11}{17}{12}{10}
+    \makeatother
+    \DeclareMathSizes{11}{17}{12}{10}
+    \makeatother
+---
+## Team Members: _____________________________________
+## _______________________________________________
+
+## Learning Objectives
+* Order of operations in Python (PEMBAS)
+* Using functions from modules
+
+## Part 1: PEMBAS in Python
+In Python, the order of operations follows the PEMBAS rule:
+- Parentheses
+- Exponents
+- Multiplication and Division (from left to right)
+- Addition and Subtraction (from left to right) 
+
+Create a Jupyter notebook code the following expressions in Python to find the solutions. Check with  your teammates that you are getting the same result:
+
+1. $(4^2 - 5 \times 3) \div (12 \div 3) + 7 =$
+
+2. $3^3 - \bigl[ 2 \times (14 - 3^2) \bigr] \div 4 =$
+
+3. $\frac{(5^3 - 2^4) \div (18 \div 3) + 4^2}{(7 - 3)^2} =$
+
+4. $6^2 - \left[ \frac{3 \times (2^5 - 4^2)}{(9 - 3)^2} \right] =$
+
+5. $\left( \frac{4^3 + 2^5}{3^2} - 5 \right) \div \left( 1 + \frac{8}{2^3} \right) =$
+
+## Part 2: Using Modules in Python
+### Built-in Python Functions
+Many math functions are built into the Python programming language.
+
+**Create a new Jupyter notebook and try entering the following code:**
+
+```{python}
+maximum_number = max(3, 4.4, 12, 0, -8)
+maximum_number
+```
+
+You are calling the Python function max() and assigning the result to the variable maximum_number. Then, when  you type the variable name on a separate line the result is displayed. Naturally, there is also a min() function. 
+
+**Try it with the same set of numbers.**
+
+### External Modules
+Not every function is baked into the language. Often you must load the functions you need from an external module. Here we import the math module so we have access to the value pi. Try this:
+
+```{python}
+import math
+print(math.pi)
+```
+
+After you have imported the math module, you have access to all of its functions using the dot notation. Thus, math.pi gives you the value for pi from the math module. 
+
+**Use math.pi to find the area of a circle with a radius of 4: **
+_____________
+
+### So many modules!
+There are many, many modules available in Python. Each module is a library of functions designed to assist with a particular task -- math problems, machine learning,  plotting graphs, working with databases, designing websites, creating games -- you name it, there is probably a Python module that does it! Often, more than one. You will become familiar with quite a few python modules in this course.
