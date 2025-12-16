@@ -1,7 +1,0 @@
-
-project:
-  title: "test"
-  type: default
-
-execute:
-  enabled: true

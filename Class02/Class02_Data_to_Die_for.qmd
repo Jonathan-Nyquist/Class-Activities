@@ -1,0 +1,48 @@
+---
+title: "Honors Class02 Activity: Data to Die For..."
+jupyter: datascience
+format:
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+---
+## Team Members: _____________________________________
+## _______________________________________________
+
+## Learning Objectives
+* Plotting data by hand
+* Probability Distributions
+* Sample distributions and sample size
+
+## Activity Introduction [^1]
+This activity introduces several concepts we will revisit throughout the semester, including probability, and sample size. Just for this one activity, you’ll be plotting the data by hand because, hey, everyone needs to remember what it was like before computers! 
+
+[^1]: This activity and the associated graphic were adapted in large part from the excellent introduction: http://pages.stat.wisc.edu/~ifischer/Intro_Stat/Lecture_Notes/4_-_Classical_Probability_Distributions/4.1_-_Discrete_Models.pdf
+
+If you roll a single die, there are six possible outcomes: S = {1, 2, 3, 4, 5, 6}. If the die is not loaded these outcomes are equally likely, so each has a one in six chance of occurring or a probability of 1/6, where 0 means no chance and 1 means 100% certainty. Because each outcome is equally likely, the distribution of probabilities is “uniform.”
+
+![Sample space](images/sample_space.png){width=90%}
+
+## Experiment
+The sum of the two dice is any integer between 2 and 12, but the probability distribution is no longer uniform. Let’s find it experimentally.
+
+On the graph paper provided, you will plot the frequency distribution, which is the number of times each value occurred in the data sample. For example, if you had one 2, one 3, two 4’s, three 5’s, four 6’s, six 7’s, three 8’s one 9, two 10’s and one 12, your plot would look like this:
+![hand-drawn histogram](images/hist_by_hand.png)
+
+## Data from 50 rolls of a pair of dice
+
+|   |   |   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|---|---|
+| 7 | 11 | 5 | 3 | 8 | 6 | 6 | 9 | 5 | 4 |
+| 9 | 7 | 10 | 5 | 7 | 6 | 6 | 7 | 10 | 8 |
+| 7 | 4 | 6 | 8 | 11 | 4 | 6 | 5 | 7 | 9 |
+| 10 | 8 | 5 | 8 | 12 | 9 | 7 | 5 | 6 | 10 |
+| 9 | 4 | 6 | 3 | 8 | 7 | 9 | 8 | 7 | 7 |
+| 3 | 6 | 5 | 11 | 7 | 5 | 8 | 8 | 7 | 6 |
+| 4 | 10 | 7 | 9 | 6 | 5 | 8 | 3 | 7 | 7 |
+| 6 | 9 | 10 | 4 | 9 | 7 | 11 | 8 | 8 | 7 |
+| 6 | 7 | 9 | 6 | 7 | 8 | 6 | 5 | 8 | 5 |
+| 7 | 9 | 9 | 9 | 5 | 9 | 9 | 10 | 6 | 9 |
+
+![Graph your data here](images/small_graph_paper.png){width=80%}
