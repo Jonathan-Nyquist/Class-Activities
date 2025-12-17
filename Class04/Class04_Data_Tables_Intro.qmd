@@ -1,0 +1,74 @@
+---
+title: "Honors Class04 Activity: Working with Data Tables"
+jupyter: datascience
+format:
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header: 
+        text:
+            \usepackage{wrapfig}
+---
+## Team Members: _____________________________________
+## _______________________________________________
+
+## Learning Objectives
+* Learn about python data types, including arrays.
+* Introduction to the datascience module
+* Learn how to create and manipulate data tables.
+
+## Python Data Types
+
+\begin{wrapfigure}{r}{2.5in}
+\includegraphics[width=2.4in]{images/Sgt_Boone.png}
+\end{wrapfigure}
+
+Tabular data is common in all fields, including science, so we need ways to work with data table in Python. We will be using the *datascience* module in this course. Our first table we will build from scratch. Later we will save a lot of typing by reading the data from a file.
+
+The data comes from Temple's [2025 Annual Security and Fire Safety Report.](https://safety.temple.edu/sites/safety/files/documents/Temple_ASFS-Report2025_F_09152025_508v3.pdf) To keep the table small, we will focus on just a small subset of the data, just crime in the residence halls and crime categories with non-zero values. For example, there was no embezzlement, vagrancy, or driving under the influence (surprise!) in the dorms, so those rows have been omitted. 
+
+Open a fresh Jupyter notebook and enter the following in a code cell.
+```{python}
+# Load all of the functions in the datascience module
+from datascience import *
+
+from datascience import Table
+
+# Arrays
+categories = [
+    "Simple Assault",
+    "Harassment",
+    "Fraud",
+    "Theft",
+    "Vandalism",
+    "Disorderly Conduct",
+    "Sex Assault (Other)",
+    "Drunkenness",
+    "All Other Offenses",
+    "TOTAL",
+]
+
+counts_2024 = [13, 44, 6, 30, 13, 1, 1, 8, 0, 116]
+counts_2023 = [0, 61, 9, 24, 17, 6, 0, 7, 1, 125]
+counts_2022 = [3, 32, 9, 23, 9, 0, 1, 5, 6, 88]
+
+# Create the table
+res_hall = Table().with_columns(
+    "Category",
+    categories,
+    "2024",
+    counts_2024,
+    "2023",
+    counts_2023,
+    "2022",
+    counts_2022,
+)
+
+res_hall
+```
+
+It is import to understand what just happened. A data table is comprised of columns. The columns are arrays of data. Different columns can hold different types of data, but all of the rows in a given column must be the same data type. Here we have one column of strings (the type of crime) and three numeric columns for the three years of data. Each column in the table has a label, the column header.
+
+So to build this table, we first created a list for each column. Then we called `Table().with_columns()` to buld the table. The arguments to this function were label, array, label, array, ...\
+for at many columns a needed.
