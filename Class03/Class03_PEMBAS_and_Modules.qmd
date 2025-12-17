@@ -157,3 +157,9 @@ Sales tax is 7.25% and applies only to the supplies, not shipping.\
 After everything is purchased, the vendor issues a $35 rebate.
 
 **What is the final total cost?**
+
+## Reflection
+Each team member solved at least one problem using intermediate variables.\
+	•	Choose one problem you all attempted.\
+	•	How did your variable choices differ?\
+	•	Did one approach feel clearer or easier to debug? Why?\
