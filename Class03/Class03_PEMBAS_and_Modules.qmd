@@ -23,6 +23,7 @@ header-includes:
 ## Learning Objectives
 * Order of operations in Python (PEMBAS)
 * Using functions from modules
+* Turning word problems into code
 
 ## Part 1: PEMBAS in Python
 In Python, the order of operations follows the PEMBAS rule:
@@ -56,10 +57,10 @@ maximum_number
 
 You are calling the Python function max() and assigning the result to the variable maximum_number. Then, when  you type the variable name on a separate line the result is displayed. Naturally, there is also a min() function. 
 
-**Try it with the same set of numbers.**
+**Try min() with the same set of numbers.**
 
 ### External Modules
-Not every function is baked into the language. Often you must load the functions you need from an external module. Here we import the math module so we have access to the value pi. Try this:
+To keep Python lean, not every function is baked into the language. Often you must load the functions you need from an external module. Here we import the math module so we have access to the value pi. Try this:
 
 ```{python}
 import math
@@ -71,5 +72,88 @@ After you have imported the math module, you have access to all of its functions
 **Use math.pi to find the area of a circle with a radius of 4: **
 _____________
 
-### So many modules!
+The math module contains many functions. **To see the complete list type dir(math) in a code cell that comes after you have imported the math module.**
+
 There are many, many modules available in Python. Each module is a library of functions designed to assist with a particular task -- math problems, machine learning,  plotting graphs, working with databases, designing websites, creating games -- you name it, there is probably a Python module that does it! Often, more than one. You will become familiar with quite a few python modules in this course.
+
+## Turning Word Problems in to Code
+Learning to program is all about breaking down a problem into simple steps that can be expressed in code. Computers do precisely what you tell them to do -- no more, no less. You need to know exactly what steps you need to before you can create a program that solves a problem. Your instructions have to be clear and free of typos. Let's code some simple word problems for practice.
+
+#### Problem:
+A stream’s water level was measured at four times during the day:\
+1.12, 1.18, 1.09, 1.15 meters.\
+What is the average water level? ____________________
+
+#### Problem:
+A pond’s water level increased from 0.85 m to 0.92 m after rainfall.\
+What is the percent increase? ____________________
+
+#### Problem:
+A student’s final grade is:\
+	•	Homework: 30% (92)\
+	•	Midterm: 25% (85)\
+	•	Final: 45% (88)\
+What is the final numeric grade? _____________________
+
+### Breaking Down Longer Problems
+As problems become more complicated, it is import to solve them in steps, creating python variables to hold intermediate values. Let's work an example together.
+
+#### Problem
+An environmental science class is planning a field trip.\
+	•	The bus costs $485 total.\
+	•	Each student ticket costs $12.50.\
+	•	There are 28 students and 2 instructors, and instructors do not pay ticket fees.\
+
+The department will subsidize 40% of the total cost.
+
+**What is the cost per student after the subsidy?**
+
+```{python}
+bus_cost = 485
+ticket_cost = 12.5
+num_students = 28
+subsidy = 0.4
+
+total_cost = bus_cost + ticket_cost * num_students
+print("The total cost is:", total_cost)
+
+cost_with_subsidy = total_cost - total_cost * subsidy
+print("Cost after subsidy is:", cost_with_subsidy)
+
+cost_per_student = cost_with_subsidy / num_students
+print("Cost per student is:", cost_per_student)
+```
+
+#### Key points:
+* Print and check intermediate results. It easier to debug your code when the final answer is not what you expected.
+* Pick variable names that are easy to understand.
+
+Once a solution is programmed this way, it is easy to change a value. 
+
+**Suppose the department decides to increase the subsidy to 50%. What is the new price per student?** _______
+
+Now it is your turn. Create as many code cells as you need.
+
+#### Problem
+A rain gauge recorded rainfall over three consecutive intervals:\
+	•	18 mm in 30 minutes\
+	•	22 mm in 45 minutes\
+	•	10 mm in 15 minutes\
+  
+**What was the total rainfall?**
+\vspace{1cm}
+
+**What was the average rainfall rate (mm/hr) over the entire storm?**
+\vspace{1cm}
+
+#### Problem
+A field crew orders sampling supplies:\
+	•	6 test kits at $18.75 each\
+	•	3 calibration solutions at $42.00 each\
+
+Shipping costs $24.50.\
+Sales tax is 7.25% and applies only to the supplies, not shipping.\
+
+After everything is purchased, the vendor issues a $35 rebate.
+
+**What is the final total cost?**
