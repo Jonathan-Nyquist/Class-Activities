@@ -60,7 +60,6 @@ Here’s the histogram from a 10,000-roll simulation, which now closely matches 
 ![Histogram for 10,000 rolls](images/hist10_000.png)
 
 Based on a simulation of 10,000 rolls, the most likely sum is 7.
-\clearpage
 
 ## Discussion Questions
 When you rolled two dice, you were no longer working with a uniform distribution. **What changed between rolling one die and rolling two dice?**

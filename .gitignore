@@ -2,7 +2,6 @@
 .quarto/
 *_files/
 *.html
-*.pdf
 *.docx
 *.pptx
 *.quarto_ipynb
