@@ -1,0 +1,74 @@
+---
+title: "Honors Class05 Activity: Practice Quiz Questions"
+jupyter: datascience
+format:
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    include-in-header: 
+        text:
+            \usepackage{wrapfig}
+---
+## Team Members: _____________________________________
+## _______________________________________________
+
+## Learning Objectives
+* Test your understanding
+* Prepare for Quiz 1
+
+This activity is practice for the first quiz. Do not use a Jupyter notebook. Answer the questions based on your programming experience. These are the types of questions that will be on the first Quiz. If you are stuck, talk with a team member. If you are *really* stuck, then try the code in a Jupyter notebook.
+
+#### Problem 1: What is the output?
+```{python}
+# | output: false
+a = "I'm not arguing."
+b = "I'm just explaining why I'm right."
+print(a + b)
+```
+\vspace {1 cm}
+
+#### Problem 2: What is the output?
+```{python}
+# | output: false
+winter_months = ["December", "January", "February", "March"]
+print(winter_months[3])
+```
+\vspace {1 cm}
+
+#### Problem 3: What is the output?
+```{python}
+# | output: false
+x = 2**3 / 8 + 3
+print(x)
+```
+\vspace {1 cm}
+
+#### Problem 4: What is the output?
+```{python}
+#| eval: false
+# What do you call a fish with no eyes?
+answer = "fish".replace("i","")
+answer
+```
+\vspace {1 cm}
+
+
+#### Problem 5: Explain the error.
+```{python}
+#| eval: false
+my_tuple = ("Dr. Nyquist", "Geophysicist", "CST")
+my_tuple[2] = "Earth & Environmental Science"
+```
+TypeError: 'tuple' object does not support item assignment
+\vspace {1 cm}
+
+#### Problem 6: What is the output?
+```{python}
+#| eval: false
+import numpy as np
+a = 3
+b = 4
+c = np.sqrt(a**2 + b**2)
+```
+\vspace {1 cm}
