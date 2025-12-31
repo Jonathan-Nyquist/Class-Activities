@@ -106,7 +106,7 @@ print(colors)
 ```
 \newpage
 
-#### The next 10 questions are based on the following data table named `dice_results`.
+#### The next 5 questions are based on the following data table named `dice_results`.
 ```{python}
 # | echo: false
 from datascience import *
