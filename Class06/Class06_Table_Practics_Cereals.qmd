@@ -20,51 +20,23 @@ format:
 * Understanding metadata
 * Manipulating data tables
 
-You will be using data tables for just about everything the rest of the semester, so let warm-up today with exercise designed to review many of the basic table operations. And what could be better on a table than some breakfast cereal? We'll start by loading a data with the following information:
+You will be using data tables for just about everything the rest of the semester, so let warm-up today with exercise designed to review many of the basic table operations. And what could be better on a table than some breakfast cereal? We'll start by loading a data from a file.
 
-Content
-Fields in the dataset:
+To save you a lot of typing, there is a starter Jupyter notebook under "class activities." Open the one for class_06. At the start you are provided with metadata.
 
-Name: Name of cereal
+**Problem 1: In your own words, what is metadata?**
+\vspace {1 cm}
 
-```
-- mfr: Manufacturer of cereal
-- A = American Home Food Products;
-- G = General Mills
-- K = Kelloggs
-- N = Nabisco
-- P = Post
-- Q = Quaker Oats
-- R = Ralston Purina
-- type:
-- cold
-- hot
-- calories: calories per serving
-- protein: grams of protein
-- fat: grams of fat
-- sodium: milligrams of sodium
-- fiber: grams of dietary fiber
-- carbo: grams of complex carbohydrates
-- sugars: grams of sugars
-- potass: milligrams of potassium
-- vitamins: vitamins and minerals - 0, 25, or 100, indicating the typical percentage of FDA recommended
-- shelf: display shelf (1, 2, or 3, counting from the floor)
-- weight: weight in ounces of one serving
-- cups: number of cups in one serving
-- rating: a rating of the cereals (Possibly from Consumer Reports?)
-```
+Recall that an array has to contain data of all the same type. Most of the data is numeric.
 
-**Data the describes the data is called "metadata." Metadata is a critical component of every data set.**
+**Problem 2: Which columns contain an arrays of strings?**
+\vspace {1 cm}
 
-Acknowledgements
-These datasets have been gathered and cleaned up by Petra Isenberg, Pierre Dragicevic and Yvonne Jansen. The data was downloaded from Kaggle.
-
-#### Problem 1: What is the output?
+Try extracting the rating data from the table.
 ```{python}
-# | output: false
-a = "I'm not arguing."
-b = "I'm just explaining why I'm right."
-print(a + b)
+ratings = cereal.column("rating")
+ratings
 ```
 \vspace {1 cm}
 
+Now find the average rating.
