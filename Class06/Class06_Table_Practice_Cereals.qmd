@@ -1,6 +1,6 @@
 ---
 title: "Honors Class06 Activity: Practice with Tables -- Breakfast Cereals"
-jupyter: datascience
+jupyter: ds313
 format:
   pdf:
     documentclass: article
