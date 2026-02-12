@@ -1,6 +1,6 @@
 ---
 title: "Honors Class03 Activity: PEMBAS and Modules"
-jupyter: datascience
+jupyter: ds313
 format:
   html:
     css: class03-math-print.css
@@ -23,6 +23,7 @@ header-includes:
 ## Learning Objectives
 * Order of operations in Python (PEMBAS)
 * Using functions from modules
+* Using lists and arrays to store multiple values
 * Turning word problems into code
 
 ## Part 1: PEMBAS in Python
@@ -44,6 +45,7 @@ Create a Jupyter notebook code the following expressions in Python to find the s
 
 5. $\left( \frac{4^3 + 2^5}{3^2} - 5 \right) \div \left( 1 + \frac{8}{2^3} \right) =$
 
+
 ## Part 2: Using Modules in Python
 ### Built-in Python Functions
 Many math functions are built into the Python programming language.
@@ -51,6 +53,7 @@ Many math functions are built into the Python programming language.
 **Create a new Jupyter notebook and try entering the following code:**
 
 ```{python}
+#| eval: false
 maximum_number = max(3, 4.4, 12, 0, -8)
 maximum_number
 ```
@@ -63,6 +66,7 @@ You are calling the Python function max() and assigning the result to the variab
 To keep Python lean, not every function is baked into the language. Often you must load the functions you need from an external module. Here we import the math module so we have access to the value pi. Try this:
 
 ```{python}
+#| eval: false
 import math
 print(math.pi)
 ```
@@ -72,14 +76,66 @@ After you have imported the math module, you have access to all of its functions
 **Use math.pi to find the area of a circle with a radius of 4: **
 _____________
 
-The math module contains many functions. **To see the complete list type dir(math) in a code cell that comes after you have imported the math module.**
+The math module contains many functions. *To see the complete list type dir(math) in a code cell that comes after you have imported the math module.*
+
+**Give an example of one of the math module functions: **
+_____________
 
 There are many, many modules available in Python. Each module is a library of functions designed to assist with a particular task -- math problems, machine learning,  plotting graphs, working with databases, designing websites, creating games -- you name it, there is probably a Python module that does it! Often, more than one. You will become familiar with quite a few python modules in this course.
 
-## Turning Word Problems in to Code
+## Part 3: List and arrays
+In Python, we can use lists to store multiple values in a single variable. Lists are ordered, mutable, and can contain elements of different types. We can also use arrays from the NumPy library, which are more efficient for numerical operations.
+
+Let's create a list of the first five prime numbers (enter the code in your noteblook):
+```{python}
+#| eval: false
+prime_list = [2, 3, 5, 7, 11]
+print(prime_list)
+```	
+Notice that the elments of the list are enclosed in square brackets and separated by commas. We can access individual elements of the list using their index (starting from 0). For example, `prime_list[0]` will give us the first prime number, which is 2. Whereas `prime_list[3]` will give us the fourth prime number, which is 7. *Python uses zero-based indexing, which means that the first element of a list is accessed with index 0, the second element with index 1, and so on.*
+
+**What number is at index 2? ____________________**
+
+We can also access a range of elements using slicing. For example, `prime_list[1:4]` will give us the second, third, and fourth prime numbers, which are 3, 5, and 7. The slice start with element at index 1 and goes up to, but does not include, the element at index 4.
+
+**What numbers are in the slice `prime_list[2:5]`? ____________________**
+
+We can also modify the list by adding, removing, or changing elements. For example, we can add the next prime number to the list using the append() method (try this in your notebook):
+```{python}
+#| eval: false
+prime_list.append(13)
+print(prime_list)
+```	
+
+
+
+Now let's create a NumPy array of the same prime numbers:
+```{python}
+#| eval: false
+import numpy as np
+prime_array = np.array(prime_list)
+print(prime_array)
+```
+
+Do you notice any differences in how the list and array are displayed? The array also has a data type associated with it (in this case, integers), while the list can contain elements of different types. For example, we can add a string to the list:
+```{python}
+#| eval: false
+prime_list.append("thirteen")
+print(prime_list)
+```
+
+But we cannot add a string to the NumPy array without changing its data type:
+```{python}
+#| eval: false
+prime_array = np.append(prime_array, "thirteen")
+```
+This will convert the entire array to a string data type, which is not what we want.
+
+
+## Part 4: Turning Word Problems into Code
 Learning to program is all about breaking down a problem into simple steps that can be expressed in code. Computers do precisely what you tell them to do -- no more, no less. You need to know exactly what steps you need to before you can create a program that solves a problem. Your instructions have to be clear and free of typos. Let's code some simple word problems for practice.
 
-#### Problem:
+#### Problem: Solve the following problem using Python code. Create as many code cells as you need.
 A stream’s water level was measured at four times during the day:\
 1.12, 1.18, 1.09, 1.15 meters.\
 What is the average water level? ____________________
@@ -98,7 +154,7 @@ What is the final numeric grade? _____________________
 ### Breaking Down Longer Problems
 As problems become more complicated, it is import to solve them in steps, creating python variables to hold intermediate values. Let's work an example together.
 
-#### Problem
+#### Problem:
 An environmental science class is planning a field trip.\
 	•	The bus costs $485 total.\
 	•	Each student ticket costs $12.50.\
@@ -134,7 +190,7 @@ Once a solution is programmed this way, it is easy to change a value.
 
 Now it is your turn. Create as many code cells as you need.
 
-#### Problem
+#### Problem:
 A rain gauge recorded rainfall over three consecutive intervals:\
 	•	18 mm in 30 minutes\
 	•	22 mm in 45 minutes\
@@ -146,7 +202,7 @@ A rain gauge recorded rainfall over three consecutive intervals:\
 **What was the average rainfall rate (mm/hr) over the entire storm?**
 \vspace{1cm}
 
-#### Problem
+#### Problem:
 A field crew orders sampling supplies:\
 	•	6 test kits at $18.75 each\
 	•	3 calibration solutions at $42.00 each\
