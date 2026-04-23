@@ -1,6 +1,6 @@
 ---
 title: "Honors Class04 Activity: Working with Data Tables"
-jupyter: datascience
+jupyter: eds
 format:
   pdf:
     documentclass: article
@@ -66,7 +66,7 @@ res_hall
 It is import to understand what just happened. A data table is comprised of columns. The columns are arrays of data. Different columns can hold different types of data, but all of the rows in a given column must be the same data type. Here we have one column of strings (the type of crime) and three numeric columns for the three years of data. Each column in the table has a label, the column header.
 
 So to build this table, we first created a list for each column. Then we called `Table().with_columns()` to buld the table. The arguments to this function were label, array, label, array, ...\
-for at many columns a needed. Note: all of the columns must have the same number number of rows.
+for as many columns a needed. Note: all of the columns must have the same number number of rows.
 
 ## Working with Data Tables
 Once the data is in a datascience table, you have have many properties and methods available to operate on the data. 
