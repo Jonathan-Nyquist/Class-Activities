@@ -1,53 +1,108 @@
 ---
 title: "Honors Class01 Activity: Of Dice and Men"
-jupyter: datascience
+jupyter: ds313
+lang: en
 format:
   pdf:
     documentclass: article
     geometry: margin=1in
     fontsize: 11pt
+    pdf-engine: pdflatex
+    template-partials:
+      - doc-class.tex
+    include-in-header:
+      text: |
+        \usepackage{booktabs}
+  html:
+    toc: false
+    embed-resources: true
+    theme: default
 ---
-## Team Members: _____________________________________
-## _______________________________________________
+
+::: {.content-visible when-format="html"}
+**Team Members:** <input type="text" aria-label="Team member 1 name" style="width:16em; border:none; border-bottom:1px solid black;">
+
+<input type="text" aria-label="Team member 2 name" style="width:16em; border:none; border-bottom:1px solid black;">
+:::
+
+::: {.content-visible when-format="pdf"}
+**Team Members:** \underline{\hspace{7cm}}
+
+\underline{\hspace{9cm}}
+:::
 
 Each team will receive a pair of dice. Roll the dice 50 times and record the total for each roll in the table on the back of this page along with the running grand total.
 
-1. Grand  total  of all 50 rolls here: _____________________
+::: {.content-visible when-format="html"}
 
-2. Divide the sum by 50 to calculate the average: ____________________
+1. Grand total of all 50 rolls:
+   <input type="text" aria-label="Grand total of all 50 rolls" style="width:8em; border:none; border-bottom:1px solid black;">
 
-3. What is the expected value of the average?  Explain.\newline
-\vspace{1cm}
+2. Divide the sum by 50 to calculate the average:
+   <input type="text" aria-label="Average" style="width:8em; border:none; border-bottom:1px solid black;">
 
-4. How much does your average differ from this expected value? ______________
+3. What is the expected value of the average? Explain.
+
+   <textarea aria-label="Answer to question 3" rows="3" style="width:100%; border:1px solid #ccc; border-radius:3px;"></textarea>
+
+4. How much does your average differ from this expected value?
+   <input type="text" aria-label="Difference from expected value" style="width:6em; border:none; border-bottom:1px solid black;">
 
 5. Do you think this difference is plausible given you only rolled the dice 50 times?
-\vspace{1cm}
 
-6. If you wanted to be very confident the dice were fair, how many rolls would you want to do? Explain your reasoning (even if it’s not exact math).
-\vspace{1cm} 
+   <textarea aria-label="Answer to question 5" rows="3" style="width:100%; border:1px solid #ccc; border-radius:3px;"></textarea>
 
-7. The probability of rolling a 12  is 1/36. Out of 50 rolls, how many 12s would you expect on average? 
-\vspace{1cm} 
+6. If you wanted to be very confident the dice were fair, how many rolls would you want to do? Explain your reasoning (even if it's not exact math).
+
+   <textarea aria-label="Answer to question 6" rows="3" style="width:100%; border:1px solid #ccc; border-radius:3px;"></textarea>
+
+7. The probability of rolling a 12 is 1/36. Out of 50 rolls, how many 12s would you expect on average?
+
+   <textarea aria-label="Answer to question 7" rows="3" style="width:100%; border:1px solid #ccc; border-radius:3px;"></textarea>
 
 8. How many 12s did you roll and does this seem to be in agreement with the odds?
-\vspace{1cm} 
 
-9. Suppose a classmate claims your dice are unfair because you didn’t get any 12s. What evidence would you use to argue for or against this claim?
-\vspace{1cm} 
+   <textarea aria-label="Answer to question 8" rows="3" style="width:100%; border:1px solid #ccc; border-radius:3px;"></textarea>
+
+9. Suppose a classmate claims your dice are unfair because you didn't get any 12s. What evidence would you use to argue for or against this claim?
+
+   <textarea aria-label="Answer to question 9" rows="3" style="width:100%; border:1px solid #ccc; border-radius:3px;"></textarea>
 
 10. Based on this activity, write one sentence that summarizes what you learned about randomness and averages.
-\vspace{1cm}
 
+    <textarea aria-label="Answer to question 10" rows="3" style="width:100%; border:1px solid #ccc; border-radius:3px;"></textarea>
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+```{=latex}
+\begin{enumerate}
+\item Grand total of all 50 rolls: \underline{\hspace{5cm}}
+\item Divide the sum by 50 to calculate the average: \underline{\hspace{4cm}}
+\item What is the expected value of the average? Explain.\par\vspace{1cm}
+\item How much does your average differ from this expected value? \underline{\hspace{3cm}}
+\item Do you think this difference is plausible given you only rolled the dice 50 times?\par\vspace{1cm}
+\item If you wanted to be very confident the dice were fair, how many rolls would you want to do? Explain your reasoning (even if it's not exact math).\par\vspace{1cm}
+\item The probability of rolling a 12 is 1/36. Out of 50 rolls, how many 12s would you expect on average?\par\vspace{1cm}
+\item How many 12s did you roll and does this seem to be in agreement with the odds?\par\vspace{1cm}
+\item Suppose a classmate claims your dice are unfair because you didn't get any 12s. What evidence would you use to argue for or against this claim?\par\vspace{1cm}
+\item Based on this activity, write one sentence that summarizes what you learned about randomness and averages.
+\end{enumerate}
+\vspace{1cm}
+```
+
+```{=latex}
 \newpage
-\vfill
 \renewcommand{\arraystretch}{1.8}
-\begin{center}
-\begin{tabular}{|r|c|c||r|c|c|}
-\hline
+\begin{table}[h]
+\centering
+\caption{Dice Roll Data: Record the sum of each roll and the running total.}
+\begin{tabular}{|r|c|c|r|c|c|}
+\toprule
 \textbf{Roll \#} & \textbf{Dice Sum} & \textbf{Running Total} &
 \textbf{Roll \#} & \textbf{Dice Sum} & \textbf{Running Total} \\
-\hline
+\midrule
 1  &  &  & 26 &  &  \\ \hline
 2  &  &  & 27 &  &  \\ \hline
 3  &  &  & 28 &  &  \\ \hline
@@ -72,7 +127,48 @@ Each team will receive a pair of dice. Roll the dice 50 times and record the tot
 22 &  &  & 47 &  &  \\ \hline
 23 &  &  & 48 &  &  \\ \hline
 24 &  &  & 49 &  &  \\ \hline
-25 &  &  & 50 &  &  \\ \hline
+25 &  &  & 50 &  &  \\ \bottomrule
 \end{tabular}
-\end{center}
-\vfill
+\end{table}
+```
+
+:::
+
+::: {.content-visible when-format="html"}
+
+### Dice Roll Data
+
+Record the sum of each roll and the running total.
+
+```{python}
+#| echo: false
+#| output: asis
+
+cell = "border:1px solid #ccc; padding:4px;"
+th = "border:1px solid #999; padding:6px; background:#f0f0f0; text-align:center;"
+
+rows = "".join(
+    f'<tr>'
+    f'<td style="{cell} text-align:right;">{i}</td>'
+    f'<td style="{cell}"><input type="text" aria-label="Dice sum for roll {i}" style="width:5em;"></td>'
+    f'<td style="{cell}"><input type="text" aria-label="Running total after roll {i}" style="width:7em;"></td>'
+    f'</tr>'
+    for i in range(1, 51)
+)
+
+print(f"""<table style="border-collapse:collapse; width:100%;">
+<caption style="font-weight:bold; margin-bottom:0.5em; caption-side:top;">
+  Dice Roll Data: Record the sum of each roll and the running total.
+</caption>
+<thead>
+<tr>
+<th scope="col" style="{th} text-align:right;">Roll #</th>
+<th scope="col" style="{th}">Dice Sum</th>
+<th scope="col" style="{th}">Running Total</th>
+</tr>
+</thead>
+<tbody>{rows}</tbody>
+</table>""")
+```
+
+:::
