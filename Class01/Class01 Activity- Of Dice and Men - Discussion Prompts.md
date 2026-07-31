@@ -29,4 +29,3 @@ This is an introduction to hypothesis testing.
 Have a few students read their final sentence.
 
 * Which of these statements would still be true if we changed the context from dice to polling, experiments, or climate data?
-
