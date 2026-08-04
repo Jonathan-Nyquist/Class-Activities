@@ -129,6 +129,79 @@ notebook.
 
 #answer-space(height: 1.8cm)
 
+== Where the Correction Comes From
+
+Before you write `est_corrected`, here is the argument behind it.
+
+Your captured serial numbers chop the stretch from zero up to the largest one you saw into
+$k$ pieces: the space below the smallest, and the space between each consecutive pair. If
+the capture was random, none of those gaps is special, so on average they are all the same
+size — namely $m \/ k$. Above the largest serial there is one more stretch, the tanks you
+never saw, and no reason it should be systematically wider or narrower than the others. So
+estimate it at one more average gap.
+
+#v(0.15cm)
+
+#let W = 12.4cm
+#let TOP = 17.5
+#let px(v) = v * W / TOP
+
+#align(center)[
+  #box(width: W + 1.2cm, height: 2.9cm)[
+    #place(dx: px(0), dy: 1.0cm, rect(width: px(2), height: 0.4cm,
+      fill: rgb("#e4e4e4"), stroke: 0.4pt + rgb("#666666")))
+    #place(dx: px(2), dy: 1.0cm, rect(width: px(4), height: 0.4cm,
+      fill: rgb("#e4e4e4"), stroke: 0.4pt + rgb("#666666")))
+    #place(dx: px(6), dy: 1.0cm, rect(width: px(1), height: 0.4cm,
+      fill: rgb("#e4e4e4"), stroke: 0.4pt + rgb("#666666")))
+    #place(dx: px(7), dy: 1.0cm, rect(width: px(7), height: 0.4cm,
+      fill: rgb("#e4e4e4"), stroke: 0.4pt + rgb("#666666")))
+    #place(dx: px(14), dy: 1.0cm, rect(width: px(3.5), height: 0.4cm,
+      fill: none, stroke: (paint: rgb("#444444"), thickness: 0.7pt, dash: "dashed")))
+
+    #place(dx: 0cm, dy: 1.0cm, line(length: W + 0.4cm, stroke: 0.8pt))
+
+    #place(dx: -0.5cm, dy: 0.5cm, box(width: 1cm)[#align(center)[#text(size: 9pt)[0]]])
+    #place(dx: px(2) - 0.5cm, dy: 0.5cm, box(width: 1cm)[#align(center)[#text(size: 9pt)[2]]])
+    #place(dx: px(6) - 0.5cm, dy: 0.5cm, box(width: 1cm)[#align(center)[#text(size: 9pt)[6]]])
+    #place(dx: px(7) - 0.5cm, dy: 0.18cm, box(width: 1cm)[#align(center)[#text(size: 9pt)[7]]])
+    #place(dx: px(14) - 0.5cm, dy: 0.5cm, box(width: 1cm)[#align(center)[#text(size: 9pt)[14]]])
+    #place(dx: px(17.5) - 0.7cm, dy: 0.5cm, box(width: 1.4cm)[#align(center)[#text(size: 9pt)[17.5]]])
+
+    #place(dx: px(2), dy: 0.86cm, line(length: 0.28cm, angle: 90deg, stroke: 0.8pt))
+    #place(dx: px(6), dy: 0.86cm, line(length: 0.28cm, angle: 90deg, stroke: 0.8pt))
+    #place(dx: px(7), dy: 0.86cm, line(length: 0.28cm, angle: 90deg, stroke: 0.8pt))
+    #place(dx: px(14), dy: 0.86cm, line(length: 0.28cm, angle: 90deg, stroke: 0.8pt))
+    #place(dx: px(17.5), dy: 0.86cm, line(length: 0.28cm, angle: 90deg,
+      stroke: (paint: rgb("#444444"), thickness: 0.8pt, dash: "dashed")))
+
+    #place(dx: px(0), dy: 1.48cm, box(width: px(2))[#align(center)[#text(size: 8pt)[2]]])
+    #place(dx: px(2), dy: 1.48cm, box(width: px(4))[#align(center)[#text(size: 8pt)[4]]])
+    #place(dx: px(6), dy: 1.48cm, box(width: px(1))[#align(center)[#text(size: 8pt)[1]]])
+    #place(dx: px(7), dy: 1.48cm, box(width: px(7))[#align(center)[#text(size: 8pt)[7]]])
+    #place(dx: px(14), dy: 1.48cm, box(width: px(3.5))[#align(center)[#text(size: 8pt)[3.5]]])
+
+    #place(dx: px(0), dy: 1.95cm, box(width: px(14))[#align(center)[
+      #text(size: 8.5pt, style: "italic")[four gaps below the largest serial, average 14 ÷ 4 = 3.5]]])
+    #place(dx: px(14) - 0.7cm, dy: 1.95cm, box(width: px(3.5) + 1.4cm)[#align(center)[
+      #text(size: 8.5pt, style: "italic")[one more average gap]]])
+  ]
+]
+
+#v(0.1cm)
+
+Above the line are the four serial numbers you captured; below it are the sizes of the gaps
+they create. Adding one more average gap gives $m + m \/ k = m (1 + 1 \/ k)$, or 17.5 here.
+
+The $- 1$ in the formula is a counting correction. Serial numbers are whole numbers and the
+gaps include their endpoints, so without it the estimate lands one tank high on average.
+That brings this sample to 16.5 — the value your function has to return in 2.2.
+
+Two checks worth making. If you captured every tank, then $k = N$ and $m = N$, and the
+formula returns exactly $N$. If you captured only one, it tells you to double the serial
+number — which is what you would have guessed anyway, since a single random serial sits
+halfway up the run on average.
+
 == Part 2. One Capture
 
 Open `Class11_German_Tank_Problem_Skeleton.ipynb` and save it under your team's name.
@@ -166,8 +239,6 @@ Open `Class11_German_Tank_Problem_Skeleton.ipynb` and save it under your team's 
 ]
 
 #answer-space(height: 2.4cm)
-
-#pagebreak()
 
 == Part 3. A Thousand Parallel Wars
 
