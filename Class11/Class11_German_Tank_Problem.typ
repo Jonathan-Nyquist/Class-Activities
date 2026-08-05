@@ -347,12 +347,13 @@ captured was 880.
 
 #pagebreak()
 
-= Written Response
+= If You Finish Early
 
-Answer both before the next class and bring them with you.
+Nothing to hand in. These are the two best questions on the sheet — take them if your team
+gets through Part 5 with time left, or argue them out with the room at the end.
 
 #question[
-  R1. Your histograms in Part 3 show a thousand estimates from a thousand captures — but in
+  E1. Your histograms in Part 3 show a thousand estimates from a thousand captures — but in
   the real war there was only ever one capture, and it either happened or it did not. So
   what are those histograms a picture of?
 ]
@@ -360,7 +361,7 @@ Answer both before the next class and bring them with you.
 #answer-space(height: 4cm)
 
 #question[
-  R2. Last class, a coin split an estate fairly on average and almost never fairly in
+  E2. Last class, a coin split an estate fairly on average and almost never fairly in
   practice. Today, one of your estimators is right on average and rarely right exactly. Say
   what the two situations have in common, and what it means to trust a procedure whose
   individual results you cannot trust.
