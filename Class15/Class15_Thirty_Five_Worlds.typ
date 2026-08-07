@@ -1,5 +1,5 @@
 #set document(
-  title: "Honors Class 14 Activity: Thirty-Five Worlds",
+  title: "Honors Class 15 Activity: Thirty-Five Worlds",
   author: "Elements of Data Science",
   keywords: ("data science", "honors", "hypothesis testing", "permutation test", "p-value", "activity"),
 )
@@ -129,29 +129,46 @@ means takes no more arithmetic than this:
 
 #question[
   #set par(justify: false)
-  1.4 A difference is at least as extreme as the one we saw when it is 8.67 or more, or
-  #sym.minus 8.67 or less. Rearranged, that is $S >= 95$ or $S <= 63$. Go through the board. \
+  1.4 Count the two tails of the board separately. \
   #v(0.1cm)
-  #h(0.4cm) Splits with $S >= 95$: #blank(width: 1.6cm) #h(0.8cm) Splits with $S <= 63$: #blank(width: 1.6cm)
-  #h(0.8cm) Total: #blank(width: 1.6cm) \
+  #h(0.4cm) Difference $>= 8.67$, that is $S >= 95$ — the treated group did better than we
+  saw: #blank(width: 1.6cm) \
   #v(0.1cm)
-  #h(0.4cm) #text(size: 12pt)[$p = $ #blank(width: 1.2cm) $\/ 35 = $ #blank(width: 2cm)]
+  #h(0.4cm) Difference $<= -8.67$, that is $S <= 63$ — the #emph[control] group did that much
+  better: #blank(width: 1.6cm) \
+  #v(0.15cm)
+  #h(0.4cm) #text(size: 12pt)[one-sided $p = $ #blank(width: 1cm) $\/ 35 = $ #blank(width: 1.8cm)
+  #h(0.8cm) two-sided $p = $ #blank(width: 1cm) $\/ 35 = $ #blank(width: 1.8cm)]
 ]
 
 #question[
-  1.5 That is not an estimate. It is the exact probability of a difference this large if the
-  treatment did nothing, and you computed it by adding three numbers at a time. At
-  $alpha = 0.05$, what do you conclude — and say it in a sentence that does not use the word
-  "proves."
+  1.5 One-sided asks whether the treatment helped. Two-sided asks whether it did anything at
+  all, help or harm. Which would your team have committed to #emph[before] seeing the data,
+  and why? (Notice that you are only allowed to answer this honestly once.)
 ]
 
-#answer-space(height: 2.4cm)
+#answer-space(height: 2.2cm)
+
+#question[
+  1.6 Doubling the one-sided p-value does not give you the two-sided one. Look at the range
+  of differences on the board — the largest and the most negative — and explain why not.
+]
+
+#answer-space(height: 2cm)
+
+#question[
+  1.7 Neither p-value is an estimate. Each is the exact probability of a result this extreme
+  if the treatment did nothing, and you got them by adding three numbers at a time. At
+  $alpha = 0.05$, what do you conclude — in a sentence that does not use the word "proves"?
+]
+
+#answer-space(height: 2.2cm)
 
 #pagebreak()
 
 == Part 2. Why Bother Simulating? #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[12 minutes]
 
-Open `Class14_Thirty_Five_Worlds_Skeleton.ipynb`. You just did by hand what the notebook is
+Open `Class15_Thirty_Five_Worlds_Skeleton.ipynb`. You just did by hand what the notebook is
 about to do three ways.
 
 #question[
@@ -163,15 +180,21 @@ about to do three ways.
   Run it twice more: #blank(width: 2.2cm) #h(0.5cm) #blank(width: 2.2cm)
 ]
 
+Seven patients gave 35 splits, which a room full of people got through in ten minutes. A
+realistic trial — 70 patients, 30 control and 40 treated — has
+
+#v(0.1cm)
+#align(center)[#text(size: 13pt)[55,347,740,058,143,507,128 splits, or about $5.5 times 10^19$]]
+#v(0.1cm)
+
 #question[
   #set par(justify: false)
-  2.3 The same trial with 70 patients, 30 control and 40 treated. Number of possible splits: \
-  #v(0.1cm)
-  #h(0.4cm) #blank(width: 6cm) \
+  2.3 Suppose a computer could check a million of those every second. How long would the
+  exhaustive version take? #blank(width: 5cm) \
   #v(0.1cm)
   #set par(justify: true)
-  At a million splits per second, roughly how long would the exhaustive version take? You do
-  not need a precise answer — an order of magnitude and a unit anyone can picture.
+  An order of magnitude and a unit anyone can picture is enough. Then say, in one sentence,
+  what that number is an argument for.
 ]
 
 #answer-space(height: 1.8cm)
