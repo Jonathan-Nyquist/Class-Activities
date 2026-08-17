@@ -94,12 +94,12 @@ this:
   caption: [Example hand-drawn frequency distribution],
 )
 
-== Data from 50 rolls of a pair of dice
+== Data from 100 rolls of a pair of dice
 
 #figure(
   table(
     columns: (1fr,) * 10,
-    stroke: (x, y) => if y == 0 { (bottom: 0.5pt) } else { none },
+    stroke: none,
     align: center,
     inset: (x: 6pt, y: 4pt),
     [7],[11],[5],[3],[8],[6],[6],[9],[5],[4],
@@ -113,7 +113,7 @@ this:
     [6],[7],[9],[6],[7],[8],[6],[5],[8],[5],
     [7],[9],[9],[9],[5],[9],[9],[10],[6],[9],
   ),
-  caption: [Raw data: sums from 50 rolls of two dice],
+  caption: [Raw data: sums from 100 rolls of two dice],
 )
 
 #figure(
