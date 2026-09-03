@@ -1,5 +1,5 @@
 #set document(
-  title: "Honors Class03 Activity: PEMBAS and Modules",
+  title: "Honors Class03 Activity: PEMDAS and Modules",
   author: "Elements of Data Science",
   keywords: ("data science", "honors", "Python", "order of operations", "activity"),
 )
@@ -65,7 +65,7 @@
   ]
 ]
 
-= Honors Class03 Activity: PEMBAS and Modules
+= Honors Class03 Activity: PEMDAS and Modules
 
 #v(1em)
 *Team Members:* #blank(width: 9cm)
@@ -76,15 +76,15 @@
 
 == Learning Objectives
 
-- Order of operations in Python (PEMBAS)
+- Order of operations in Python (PEMDAS)
 - Using functions from modules
 - Turning word problems into code
 
 // ── Part 1 ─────────────────────────────────────────────────────────────────
 
-== Part 1: PEMBAS in Python
+== Part 1: PEMDAS in Python
 
-In Python, the order of operations follows the PEMBAS rule:
+In Python, the order of operations follows the PEMDAS rule:
 
 #block(inset: (left: 1em))[
   - #strong[P]arentheses
