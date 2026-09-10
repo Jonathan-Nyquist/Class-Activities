@@ -66,7 +66,7 @@
 Working in the Class 08 matplotlib notebook. Predict first, then run. A
 prediction you got wrong is worth more than one you got right, so write down the wrong one before you fix it.
 
-== Part 1: Decode the Format String (5 minutes)
+== Part 1: Decode the Format String
 
 The notebook shows you `"-o"` and `"-ro"`. Fill in this table *from reasoning alone*,
 then test each one with `plt.plot(x, y, ...)`.
@@ -90,7 +90,7 @@ then test each one with `plt.plot(x, y, ...)`.
 
 #answer-space(height: 1.6cm)
 
-== Part 2: One Cell or Two? (7 minutes)
+== Part 2: One Cell or Two?
 
 Put these two lines together in a single cell and run it:
 
@@ -120,7 +120,7 @@ and run both.
 
 #answer-space(height: 2.2cm)
 
-== Part 3: A Table Plot Is a Matplotlib Plot (8 minutes)
+== Part 3: A Table Plot Is a Matplotlib Plot
 
 The notebook says the `datascience` table is "calling matplotlib" behind the scenes. Test
 that claim. In one cell, run `poly.plot("x", ["y1", "y2"])` and then, on the next line of
