@@ -63,67 +63,7 @@ Today you learn two things that share a name. A *conditional statement* in Pytho
 a condition holds. That is not a coincidence, and by the end of class you should be able to
 say exactly what the two have in common.
 
-== Part 1. Predicate Golf
-
-Here are twelve patients. Four of them are marked.
-
-#v(0.2cm)
-#align(center)[
-  #table(
-    columns: (1.9cm, 1.9cm, 1.9cm, 1.9cm, 2.4cm),
-    inset: 5.5pt,
-    align: center,
-    stroke: 0.5pt + rgb("#888888"),
-    [*patient*], [*age*], [*sex*], [*cp*], [*thalach*],
-    [1], [62], [M], [0], [165],
-    table.cell(fill: rgb("#dcdcdc"))[*2*], table.cell(fill: rgb("#dcdcdc"))[*41*], table.cell(fill: rgb("#dcdcdc"))[*F*], table.cell(fill: rgb("#dcdcdc"))[*2*], table.cell(fill: rgb("#dcdcdc"))[*172*],
-    [3], [58], [M], [1], [143],
-    [4], [45], [M], [0], [148],
-    [5], [67], [F], [3], [132],
-    table.cell(fill: rgb("#dcdcdc"))[*6*], table.cell(fill: rgb("#dcdcdc"))[*52*], table.cell(fill: rgb("#dcdcdc"))[*F*], table.cell(fill: rgb("#dcdcdc"))[*2*], table.cell(fill: rgb("#dcdcdc"))[*168*],
-    [7], [71], [M], [0], [125],
-    table.cell(fill: rgb("#dcdcdc"))[*8*], table.cell(fill: rgb("#dcdcdc"))[*49*], table.cell(fill: rgb("#dcdcdc"))[*M*], table.cell(fill: rgb("#dcdcdc"))[*1*], table.cell(fill: rgb("#dcdcdc"))[*155*],
-    [9], [54], [F], [0], [139],
-    [10], [60], [M], [2], [158],
-    table.cell(fill: rgb("#dcdcdc"))[*11*], table.cell(fill: rgb("#dcdcdc"))[*44*], table.cell(fill: rgb("#dcdcdc"))[*F*], table.cell(fill: rgb("#dcdcdc"))[*3*], table.cell(fill: rgb("#dcdcdc"))[*176*],
-    [12], [56], [M], [1], [151],
-  )
-]
-#v(0.2cm)
-
-Write a boolean expression that selects the four marked patients — all of them, and nobody
-else. Use column names, comparisons, and `&` (and), `|` (or), `~` (not). Parentheses around
-each comparison are required: `(age < 50) & (thalach > 160)`.
-
-*Scoring: fewest characters wins, spaces not counted.* No single comparison can do it, so
-do not waste time looking for one.
-
-#question[
-  #set par(justify: false)
-  1.1 Your expression: \
-  #v(0.15cm)
-  #blank(width: 14cm) \
-  #v(0.15cm)
-  Character count: #blank(width: 2cm) #h(1cm) Winning count in the room: #blank(width: 2cm)
-]
-
-#question[
-  1.2 Another team's expression selects the same four patients but looks nothing like
-  yours — theirs is built from `~` and yours is not, or the other way round. Write theirs
-  here and explain why both are correct.
-]
-
-#answer-space(height: 2.4cm)
-
-#question[
-  1.3 In Python, `and` works on single values and `&` works on arrays. You will get an error
-  today if you mix them up. What does that tell you about what `heart.column('age') > 55`
-  actually *is* — one answer, or many?
-]
-
-#answer-space(height: 1.6cm)
-
-== Part 2. Thirty-Six Outcomes
+== Part 1. Thirty-Six Outcomes
 
 Roll two dice, one at a time. The row is the first die, the column is the second, and the
 cell is the total. All thirty-six cells are equally likely.
@@ -151,14 +91,14 @@ cell is the total. All thirty-six cells are equally likely.
 
 #question[
   #set par(justify: false)
-  2.1 Circle every cell containing a 7. \
+  1.1 Circle every cell containing a 7. \
   #v(0.05cm)
   #h(0.4cm) P(sum is 7) = #blank(width: 1.2cm)\/36 = #blank(width: 1.8cm)
 ]
 
 #question[
   #set par(justify: false)
-  2.2 Now cover everything except one row — you have been told what the first die was.
+  1.2 Now cover everything except one row — you have been told what the first die was.
   Count the 7s in each row. \
   #v(0.1cm)
   #h(0.4cm) first die 1: #blank(width: 1cm)\/6 #h(0.5cm) 2: #blank(width: 1cm)\/6
@@ -166,37 +106,37 @@ cell is the total. All thirty-six cells are equally likely.
   #h(0.5cm) 5: #blank(width: 1cm)\/6 #h(0.5cm) 6: #blank(width: 1cm)\/6 \
   #v(0.1cm)
   #set par(justify: true)
-  Knowing the first die changes your answer by how much? This is what *independence* looks
-  like on paper.
+  How much do these six numbers differ from each other, and from your answer in 1.1? This is
+  what *independence* looks like on paper.
 ]
 
 #question[
   #set par(justify: false)
-  2.3 In craps you win immediately on a 7 or an 11. Put a box around the 11s as well. \
+  1.3 In craps you win immediately on a 7 or an 11. Put a box around the 11s as well. \
   #v(0.1cm)
   P(win) = #blank(width: 1.2cm) \/ 36 = #blank(width: 1.8cm)
 ]
 
 #question[
   #set par(justify: false)
-  2.4 Cover everything but one row again. \
+  1.4 Cover everything but one row again. \
   #v(0.1cm)
   #h(0.4cm) P(win | first die is 3) = #blank(width: 1cm)\/6 #h(1.2cm)
   P(win | first die is 5) = #blank(width: 1cm)\/6 \
   #v(0.1cm)
   #set par(justify: true)
-  Those are not equal, and neither equals your answer to 2.3. Something changed between 2.2
-  and 2.4 — the dice did not. What did?
+  Those are not equal, and neither equals your answer to 1.3. Something changed between 1.2
+  and 1.4 — the dice did not. What did?
 ]
 
 #answer-space(height: 2cm)
 
 #question[
   #set par(justify: false)
-  2.5 Now condition the other way. Of the winning cells, how many have a first die of 5? \
+  1.5 Now condition the other way. Of the winning cells, how many have a first die of 5? \
   #v(0.1cm)
   #h(0.4cm) P(first die is 5 | win) = #blank(width: 1cm)\/#blank(width: 1cm) = #blank(width: 1.6cm)
-  #h(1.2cm) compare with 2.4: #blank(width: 1.6cm) \
+  #h(1.2cm) compare with 1.4: #blank(width: 1.6cm) \
   #v(0.1cm)
   #set par(justify: true)
   Same cells on top. Different cells underneath. Say in one sentence what the denominator of
@@ -205,22 +145,22 @@ cell is the total. All thirty-six cells are equally likely.
 
 #answer-space(height: 2cm)
 
-== Part 3. Write a Diagnostic Rule
+== Part 2. Write a Diagnostic Rule
 
 Open `Class09_Same_Word_Twice_Skeleton.ipynb`. The table holds 1,025 patients referred for
 cardiac testing; `target` is 1 if they turned out to have heart disease.
 
 #question[
   #set par(justify: false)
-  3.1 P(disease) for the whole table: #blank(width: 2.5cm) — an *unconditional* probability.
+  2.1 P(disease) for the whole table: #blank(width: 2.5cm) — an *unconditional* probability.
 ]
 
 #question[
   #set par(justify: false)
-  3.2 P(disease | female) = #blank(width: 2.2cm) #h(1cm) P(female | disease) = #blank(width: 2.2cm) \
+  2.2 P(disease | female) = #blank(width: 2.2cm) #h(1cm) P(female | disease) = #blank(width: 2.2cm) \
   #v(0.1cm)
   #set par(justify: true)
-  Which of these is the grid from Part 2 again, and which cells changed?
+  Which of these is the grid from Part 1 again, and which cells changed?
 ]
 
 #answer-space(height: 1.8cm)
@@ -230,14 +170,14 @@ further testing — or `'clear'`. Then you grade it two ways.
 
 #question[
   #set par(justify: false)
-  3.3 The mediocre `example_rule` in the notebook: \
+  2.3 The mediocre `example_rule` in the notebook: \
   #v(0.1cm)
   #h(0.4cm) P(flag | disease) = #blank(width: 2.2cm) #h(1.2cm) P(disease | flag) = #blank(width: 2.2cm)
 ]
 
 #question[
   #set par(justify: false)
-  3.4 The rule that flags everybody: \
+  2.4 The rule that flags everybody: \
   #v(0.1cm)
   #h(0.4cm) P(flag | disease) = #blank(width: 2.2cm) #h(1.2cm) P(disease | flag) = #blank(width: 2.2cm) \
   #v(0.1cm)
@@ -249,15 +189,15 @@ further testing — or `'clear'`. Then you grade it two ways.
 #answer-space(height: 2cm)
 
 #question[
-  3.5 Write your team's best rule here — the conditions, in words or in code — along with
-  its two scores.
+  2.5 Write your team's best rule here — the conditions, in words or in code — along with
+  its two scores. *(One quick pass is fine — don't over-iterate.)*
 ]
 
-#answer-space(height: 3cm)
+#answer-space(height: 2.4cm)
 
 #question[
   #set par(justify: false)
-  3.6 Whose rule is best? Before the room votes, your team has to say which of the two
+  2.6 Whose rule is best? Before the room votes, your team has to say which of the two
   numbers it is competing on, and why. \
   #v(0.1cm)
   #h(0.4cm) We are competing on: #h(0.4cm) P(flag | disease) #h(1cm) P(disease | flag)
@@ -279,14 +219,6 @@ further testing — or `'clear'`. Then you grade it two ways.
   result and wants to know the chance they are sick. Which conditional probability is the
   lab quoting, which one does the patient want, and what else would you need to know to get
   from one to the other?
-]
-
-#answer-space(height: 2.8cm)
-
-#question[
-  D3. You tuned your rule by testing it on the same 1,025 patients you used to grade it.
-  What would you expect to happen to your two scores if we ran your rule on a thousand
-  patients from a different hospital, and why?
 ]
 
 #answer-space(height: 2.8cm)
