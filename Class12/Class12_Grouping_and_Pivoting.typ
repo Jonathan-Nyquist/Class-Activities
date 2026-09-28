@@ -62,7 +62,7 @@ The same 1,025 cardiac patients you wrote a diagnostic rule for in Class 09. Tod
 two methods that summarize an entire table at once, and then spend the rest of the period
 finding out what they hide. Open `Class12_Grouping_and_Pivoting.ipynb`.
 
-== Part 1. The Long Way #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[8 minutes]
+== Part 1. The Long Way
 
 #question[
   #set par(justify: false)
@@ -78,7 +78,7 @@ finding out what they hide. Open `Class12_Grouping_and_Pivoting.ipynb`.
   1.2 Lines of code your team wrote to answer 1.1: #blank(width: 1.5cm)
 ]
 
-== Part 2. `group()` #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[14 minutes]
+== Part 2. `group()`
 
 #question[
   #set par(justify: false)
@@ -100,7 +100,7 @@ finding out what they hide. Open `Class12_Grouping_and_Pivoting.ipynb`.
 
 #answer-space(height: 2.2cm)
 
-== Part 3. `pivot()` #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[10 minutes]
+== Part 3. `pivot()`
 
 #question[
   3.1 #emph[Predict first.] `slope` takes values 0, 1, 2 and `target` takes 0, 1. Sketch
@@ -120,7 +120,7 @@ finding out what they hide. Open `Class12_Grouping_and_Pivoting.ipynb`.
 
 #pagebreak()
 
-== Part 4. The Cholesterol Paradox #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[12 minutes]
+== Part 4. The Cholesterol Paradox
 
 Patients with heart disease in this table do #emph[not] have higher cholesterol than
 patients without it.
@@ -177,7 +177,7 @@ patients without it.
   #emph[Selection] — everyone here was referred for catheterization. #blank(width: 6.6cm)
 ]
 
-== Part 5. Do You Trust This Table? #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[6 minutes]
+== Part 5. Do You Trust This Table?
 
 #question[
   #set par(justify: false)
