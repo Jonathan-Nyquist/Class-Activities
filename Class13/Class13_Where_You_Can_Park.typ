@@ -63,7 +63,7 @@ about how the sample got drawn — and about two ways that goes wrong. The first
 argument you never typed. The second is a stretch of ground you could not walk to. Open
 `Class13_Where_You_Can_Park_Skeleton.ipynb`.
 
-== Part 1. Two Words That Change the Answer #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[12 minutes]
+== Part 1. Two Words That Change the Answer
 
 The marble contest from Lab 05. A bag holds two red, two green, and two blue marbles. You
 draw three. You win if all three are different colors.
@@ -101,7 +101,7 @@ draw three. You win if all three are different colors.
 
 #answer-space(height: 1.8cm)
 
-== Part 2. A Stream With No Name #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[22 minutes]
+== Part 2. A Stream With No Name
 
 A bag of marbles is a population you can hold. Now one you cannot: a stream, where the
 choice is not whether the marble goes back but which stretch of bank you can stand on.
@@ -183,7 +183,7 @@ today works.
 
 #answer-space(height: 2.8cm)
 
-== Part 3. What the Shapes Say #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[8 minutes]
+== Part 3. What the Shapes Say
 
 #question[
   3.1 The histogram of the `easy` reaches has two humps. Using `km downstream`, work out what
@@ -205,7 +205,7 @@ today works.
 
 #answer-space(height: 2.4cm)
 
-== Discussion #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[8 minutes]
+== Discussion
 
 #question[
   D1. A man is on his hands and knees under a streetlight. A passer-by asks what he lost. His
