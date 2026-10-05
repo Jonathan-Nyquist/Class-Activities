@@ -59,8 +59,8 @@
 #v(0.2cm)
 
 Every number you have computed this semester came from a sample of something. Today is
-about how the sample got drawn — and about two ways that goes wrong. The first is an
-argument you never typed. The second is a stretch of ground you could not walk to. Open
+about how the sample got drawn, and about two ways that goes wrong: an argument you never
+typed, and a stretch of ground you could not walk to. Open
 `Class13_Where_You_Can_Park_Skeleton.ipynb`.
 
 == Part 1. Two Words That Change the Answer
@@ -89,17 +89,9 @@ draw three. You win if all three are different colors.
   #v(0.05cm)
   #set par(justify: true)
   You never told `np.random.choice` which you wanted. Which has it been doing all semester?
-  And how much did that unstated default change the answer?
 ]
 
-#answer-space(height: 2cm)
-
-#question[
-  1.4 In Class 11 you captured five German tanks and read their serial numbers. That sampling
-  had to be without replacement, and not because anyone chose an argument. Why not?
-]
-
-#answer-space(height: 1.8cm)
+#answer-space(height: 1.4cm)
 
 == Part 2. A Stream With No Name
 
@@ -108,16 +100,11 @@ choice is not whether the marble goes back but which stretch of bank you can sta
 
 Everything that follows is invented — no such creek, no measurements, numbers straight out
 of a random number generator. That is on purpose: you can only study a sampling method in a
-case where the true answer is already known, which is why the tank problem invented an enemy
-with exactly 1000 tanks.
-
-The notebook holds all 240 hundred-metre reaches along a 24 km stretch of this stream, each
-with its true chloride concentration. Chloride in real urban streams
-does come largely from road salt washing off pavement, and that part is not invented. The
-`access` column says whether a crew could park and walk to the water.
-
-You have the whole population, which never happens in the field. That is the only reason
-today works.
+case where the true answer is already known. The notebook holds all 240 hundred-metre
+reaches along a 24 km stretch of this stream, each with its true chloride concentration.
+Chloride in real urban streams does come largely from road salt washing off pavement, and
+that part is not invented. The `access` column says whether a crew could park and walk to
+the water.
 
 #question[
   #set par(justify: false)
@@ -126,37 +113,17 @@ today works.
 
 #question[
   #set par(justify: false)
-  2.2 Three separate random samples of twelve reaches. Estimates: \
-  #v(0.05cm)
-  #h(0.4cm) #blank(width: 2.4cm) #h(0.6cm) #blank(width: 2.4cm) #h(0.6cm) #blank(width: 2.4cm)
-]
-
-#question[
-  #set par(justify: false)
-  2.3 Now the careless version — `creek.sample(12)` with no arguments. A single run almost
-  always looks fine, so count across a thousand of them. \
-  #v(0.05cm)
-  #h(0.4cm) Fraction of careless samples containing a repeated reach: #blank(width: 2.2cm) \
-  #v(0.05cm)
-  #set par(justify: true)
-  In the field, what would a repeat have meant you did?
-]
-
-#answer-space(height: 1.6cm)
-
-#question[
-  #set par(justify: false)
-  2.4 #emph[Predict first.] Nobody wades 24 km of creek. You park where you can park, and
+  2.2 #emph[Predict first.] Nobody wades 24 km of creek. You park where you can park, and
   the pull-offs are at road bridges. Before you run anything: a sample drawn only from the
   `easy` reaches will be \
   #v(0.05cm)
   #h(0.4cm) TOO HIGH #h(1.2cm) TOO LOW #h(1.2cm) ABOUT RIGHT #h(1.2cm) — because:
 ]
 
-#answer-space(height: 1.8cm)
+#answer-space(height: 1.6cm)
 
 #question[
-  2.5 A thousand honest random samples of twelve, against a thousand convenience samples of
+  2.3 A thousand honest random samples of twelve, against a thousand convenience samples of
   forty.
 ]
 
@@ -175,75 +142,21 @@ today works.
 #v(0.2cm)
 
 #question[
-  2.6 The convenience survey visited more than three times as many sites, and the spread of
+  2.4 The convenience survey visited more than three times as many sites, and the spread of
   its estimates is about half as wide. By every measure of precision it is the better
   survey. Say plainly what is wrong with it, and what would happen if the field crew doubled
   its effort again.
 ]
 
-#answer-space(height: 2.8cm)
-
-== Part 3. What the Shapes Say
-
-#question[
-  3.1 The histogram of the `easy` reaches has two humps. Using `km downstream`, work out what
-  each hump is. They are not the same kind of place.
-]
-
-#answer-space(height: 2.4cm)
-
-#question[
-  #set par(justify: false)
-  3.2 On the box plot, the `easy` reaches are one box. \
-  #v(0.05cm)
-  #h(0.4cm) median #blank(width: 2cm) #h(0.6cm) IQR #blank(width: 2cm) \
-  #v(0.05cm)
-  #set par(justify: true)
-  Name one thing the histogram showed you that the box plot cannot, and one thing the box
-  plot makes easier than the histogram does.
-]
-
-#answer-space(height: 2.4cm)
+#answer-space(height: 2.6cm)
 
 == Discussion
 
 #question[
-  D1. A man is on his hands and knees under a streetlight. A passer-by asks what he lost. His
-  keys. Did you lose them here? No, over there in the park — but this is where the light is.
-
-  #v(0.15cm)
-  Statisticians call this the streetlight effect, and the man's search is hopeless: the keys
-  are not under the light and he knows it. Your field crew was not doing that. The accessible
-  reaches are real creek and the chloride they measured is real.
-
-  #v(0.15cm)
-  (a) State the crew's mistake precisely. It is not that they looked in the wrong place.
-
-  #v(0.15cm)
-  (b) Sampling only where you can park is not always an error. Name a question about this
-  stream that the forty accessible reaches would answer #emph[better] than twelve random ones.
-]
-
-#answer-space(height: 2.8cm)
-
-#question[
-  D2. In 1936 the #emph[Literary Digest] mailed ten million ballots and got 2.4 million back,
+  In 1936 the #emph[Literary Digest] mailed ten million ballots and got 2.4 million back,
   one of the largest polls ever run. It predicted Landon over Roosevelt by about 57 to 43.
   Roosevelt took roughly 61% of the vote. George Gallup called it correctly with about fifty
-  thousand. Connect this to your answer to 2.6 in one sentence.
+  thousand. Connect this to your answer to 2.4 in one sentence.
 ]
 
-#answer-space(height: 2.6cm)
-
-#question[
-  D3. Today's stream was rigged so that access and chloride were linked. That is a real
-  hazard in field science, but it is not automatic — plenty of surveys are designed
-  specifically to defeat it, by fixing the sites in advance along the whole length of a
-  stream rather than stopping wherever the crew can pull over.
-
-  #v(0.15cm)
-  So: for any field dataset you are handed, what would you ask about how the sites were
-  chosen, and what would you look for in the data itself to check the answer you were given?
-]
-
-#answer-space(height: 3cm)
+#answer-space(height: 2.4cm)
