@@ -135,6 +135,18 @@ constant is just relabeling the ruler.
 below → *negative*. So when the variables track each other, nearly every product is positive
 and they add up; when they do not, positives and negatives cancel toward zero.
 
+Quadrant count (metacritic vs. `critics_choice`): *17 of 21* films sit in the two + quadrants
+(11 upper-right, 6 lower-left). The 4 in − quadrants --- Monsters, Inc., Cars, Finding Dory,
+Incredibles 2 --- all sit within about 0.5 SD of the origin, so their negative products are
+tiny. Worth pointing out: #emph[where] a point sits matters as much as #emph[which] quadrant.
+
+#note[
+*Expect confusion if students treat the table as a data-entry task.* The 2×2 is conceptual
+(signs only); the quadrant question is what ties it to the data. The notebook now draws the
+zero lines on the standardized plot and shows film names beside the `_su` columns, since `rmc`
+dropped them.
+]
+
 #align(center)[
   #table(
     columns: (3cm, 3cm, 3cm),

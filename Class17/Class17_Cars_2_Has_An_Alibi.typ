@@ -161,24 +161,26 @@ standard units. It has no units and always falls between $-1$ and $+1$.
 
 #question[
   #set par(justify: false)
-  2.3 Think about the product $z_x times z_y$ for a single film before you compute anything.
-  Fill in each cell with *positive* or *negative*: \
+  2.3 Let $x$ = `metacritic` and $y$ = `critics_choice`. For one film, think about the
+  product $z_x times z_y$. This is about #emph[signs only] --- you need no numbers from the
+  notebook. Write *+* or *−* in each cell: \
   #v(0.15cm)
   #align(center)[
     #table(
-      columns: (4.4cm, 3.2cm, 3.2cm),
+      columns: (4.6cm, 3.6cm, 3.6cm),
       inset: 6pt,
-      align: (left, center, center),
+      align: (left + horizon, center, center),
       stroke: 0.5pt + rgb("#888888"),
-      [], [*$z_y$ above average*], [*$z_y$ below average*],
-      [$z_x$ above average], [], [],
-      [$z_x$ below average], [], [],
+      [], [*$y$ above its mean* \ ($z_y > 0$)], [*$y$ below its mean* \ ($z_y < 0$)],
+      [*$x$ above its mean* \ ($z_x > 0$)], [], [],
+      [*$x$ below its mean* \ ($z_x < 0$)], [], [],
     )
   ]
   #v(0.1cm)
   #set par(justify: true)
-  Using that table, explain in one sentence why $r$ comes out large and positive when the two
-  variables track each other, and near zero when they do not.
+  Each cell is one quadrant of your standardized scatter plot from 2.2, split by the lines at 0.
+  Which quadrants hold most of the 21 films? Then explain in one sentence why $r$ comes out
+  large and positive when two variables track each other, and near zero when they do not.
 ]
 
 #answer-space(height: 1.3cm)
