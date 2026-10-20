@@ -43,100 +43,45 @@
 
 #v(0.2cm)
 
-You can fit a line to anything. The line does not care whether it makes sense. Today you will
-build the number that tells you whether a line was worth fitting --- and then find a case where
-that number lies to you.
-
-Open `Class18_Better_Than_Guessing_Skeleton.ipynb`. Answer here, on paper.
-
-== Part 1. Two Baselines #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[6 minutes]
-
-Someone reads you fifteen temperatures in random order and asks you to guess each one before
-it is revealed. You know nothing else.
-
-#question[
-  #set par(justify: false)
-  1.1 What single number should you guess every time, and why that one rather than any other?
-]
-
-#answer-space(height: 1.4cm)
-
-Now they tell you the cricket chirp rate before each guess. If chirps and temperature are
-related, you can do better than one fixed number --- you can use a line.
-
-That is the whole idea behind $R^2$. It compares the error left over after using the line to
-the error you started with using only the mean:
+You can fit a line to anything. The line does not care whether it makes sense. In lecture you
+built the number that tells you whether a line was worth fitting:
 
 #v(0.1cm)
 #align(center)[
-  $ R^2 = 1 - S S_"Residual" / S S_"Total" $
+  $ R^2 = 1 - (S S_"Residual") / (S S_"Total") $
 ]
 #v(0.1cm)
 
-#question[
-  #set par(justify: false)
-  1.2 Before computing anything: if the line were perfect, $S S_"Residual"$ would be
-  #blank(width: 1.6cm) and $R^2$ would be #blank(width: 1.6cm). If the line were no help at all,
-  $S S_"Residual"$ would equal #blank(width: 3.4cm) and $R^2$ would be #blank(width: 1.6cm).
-]
+Today you will find out where the line stops working --- and find a case where $R^2$ lies to you.
+Open `Class18_Better_Than_Guessing_Skeleton.ipynb`. Every cell runs as given. Answer here, on paper.
 
-== Part 2. How Good Is the Cricket Line? #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[20 minutes]
-
-Fifteen observations of chirp rate and temperature. Work through the notebook in order.
+== Part 1. The Cricket Line
 
 #question[
   #set par(justify: false)
-  2.1 The mean baseline. Record: \
+  1.1 Run the first cell and record: \
   #v(0.15cm)
-  #h(0.4cm) mean temperature #blank(width: 2.2cm) °F #h(1.4cm)
-  $S S_"Total"$ #blank(width: 2.6cm) \
-  #v(0.15cm)
-  #set par(justify: true)
-  In one sentence, what do the red vertical segments in the plot represent?
-]
-
-#answer-space(height: 1.2cm)
-
-#question[
-  #set par(justify: false)
-  2.2 Fit the line. \
-  #v(0.15cm)
-  #h(0.4cm) slope #blank(width: 2.2cm) #h(1cm) intercept #blank(width: 2.2cm) \
+  #h(0.4cm) slope #blank(width: 2.2cm) #h(1cm) intercept #blank(width: 2.2cm)
+  #h(1cm) $R^2$ #blank(width: 2cm) \
   #v(0.2cm)
   #set par(justify: true)
-  Write the equation, and state what the *slope* means in plain English --- with units.
+  State what the *slope* means in plain English --- with units.
 ]
 
 #answer-space(height: 1.4cm)
 
 #question[
-  #set par(justify: false)
-  2.3 Finish the calculation. \
-  #v(0.15cm)
-  #h(0.4cm) $S S_"Residual"$ #blank(width: 2.4cm) #h(1cm) $R^2$ #blank(width: 2cm)
-  #h(1cm) $r$ #blank(width: 2cm) #h(1cm) $r^2$ #blank(width: 2cm) \
-  #v(0.2cm)
-  #set par(justify: true)
-  Interpret the $R^2$ in a sentence a non-statistician would understand. What does the leftover
-  $(1 - R^2)$ represent?
-]
-
-#answer-space(height: 1.8cm)
-
-#question[
-  Last class you found $r = 0.80$ between two Pixar rating services and called it a strong
+  1.2 Last class you found $r = 0.80$ between two Pixar rating services and called it a strong
   correlation. Square it. Does "strong correlation" mean what you assumed it meant?
 ]
 
 #answer-space(height: 1.4cm)
 
-#pagebreak()
-
-== Part 3. Where the Line Stops Working #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[8 minutes]
+== Part 2. Where the Line Stops Working
 
 #question[
   #set par(justify: false)
-  3.1 Use your equation to predict the temperature at each chirp rate: \
+  2.1 Use your equation to predict the temperature at each chirp rate: \
   #v(0.15cm)
   #h(0.4cm) 19 chirps/sec → #blank(width: 2cm) °F #h(1.6cm)
   40 chirps/sec → #blank(width: 2cm) °F \
@@ -150,34 +95,30 @@ Fifteen observations of chirp rate and temperature. Work through the notebook in
 
 #answer-space(height: 2.2cm)
 
-#question[
-  3.2 The notebook keeps the fitted slope but forces the intercept to zero, and $R^2$ comes out
-  around $-14$. A negative $R^2$ means the line did worse than a flat guess at the mean. Look at
-  what that line predicts at 15 chirps/sec compared to the real temperatures, and explain how a
-  line can be *worse than useless*.
-]
+#pagebreak()
 
-#answer-space(height: 2cm)
+== Part 3. A Better Number That Is a Worse Model
 
-== Part 4. A Better Number That Is a Worse Model #h(1fr) #text(size: 9pt, style: "italic", weight: "regular")[6 minutes]
-
-The notebook now fits a straight line to a second data set and reports its $R^2$.
+The notebook now fits a straight line to a second data set. Look at the plot, but do *not* run
+the $R^2$ cell yet.
 
 #question[
   #set par(justify: false)
-  4.1 $R^2$ for the second data set #blank(width: 2cm) #h(1cm) versus the crickets
+  3.1 Predict: will this fit's $R^2$ be #h(0.3cm) *higher* #h(0.3cm) or #h(0.3cm) *lower*
+  #h(0.3cm) than the crickets'? (Circle one.) Now run the cell. \
+  #v(0.15cm)
+  #h(0.4cm) $R^2$ for the second data set #blank(width: 2cm) #h(1cm) versus the crickets
   #blank(width: 2cm) \
   #v(0.15cm)
   #set par(justify: true)
-  Which fit has the higher $R^2$? Which data set is the straight line actually the right model
-  for? Look at the plot before you answer.
+  Which data set is the straight line actually the right model for?
 ]
 
 #answer-space(height: 1.4cm)
 
 #question[
   #set par(justify: false)
-  4.2 Now compare the two *residual* plots. Sketch the shape of each, roughly: \
+  3.2 Now compare the two *residual* plots. Sketch the shape of each, roughly: \
   #v(0.2cm)
   #grid(
     columns: (1fr, 1fr),
@@ -192,8 +133,8 @@ The notebook now fits a straight line to a second data set and reports its $R^2$
 ]
 
 #question[
-  4.3 So: does a high $R^2$ mean you have the right model? State what the residual plot told you
+  3.3 So: does a high $R^2$ mean you have the right model? State what the residual plot told you
   that $R^2$ could not, in one or two sentences.
 ]
 
-#answer-space(height: 2cm)
+#answer-space(height: 3cm)
