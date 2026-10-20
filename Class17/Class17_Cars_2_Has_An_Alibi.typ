@@ -215,8 +215,8 @@ obvious candidate for the point distorting your correlation. Put it on trial.
   $r$ with Cars 2 removed #blank(width: 2cm) \
   #v(0.15cm)
   #set par(justify: true)
-  Removing the worst-looking point should have weakened the correlation. Which direction did it
-  actually move?
+  Before computing, predict: will dropping Cars 2 strengthen or weaken $r$, and by a lot or a
+  little? Then check. Which part of your prediction held up?
 ]
 
 #answer-space(height: 1.2cm)

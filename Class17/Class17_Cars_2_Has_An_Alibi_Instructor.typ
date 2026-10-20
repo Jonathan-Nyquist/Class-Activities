@@ -165,7 +165,8 @@ strong and positive, which is the unsurprising part --- they are all rating the 
 == 14 min --- Part 3. The Alibi
 
 *Q3.1:* $r$ = *0.802* with all 21 films, *0.826* with Cars 2 removed. Removing the worst-looking
-point makes the correlation *stronger*. Give the room a moment with that.
+point makes the correlation *stronger* --- most teams will have predicted that direction. What
+they will not have predicted is the size: only +0.024. Hold that number for 3.2.
 
 *Q3.2:* leave-one-out changes, largest first: Onward *+0.0473*, Cars 2 +0.0239, WALL-E +0.0091.
 Onward is at (88, 61) --- middle of the pack horizontally, well below everything else vertically.
