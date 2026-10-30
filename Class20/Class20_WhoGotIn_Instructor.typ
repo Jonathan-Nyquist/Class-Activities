@@ -42,12 +42,12 @@ About 9 minutes nominal, quiz day, paper only (no laptops). Files in `Class20/`:
   [*Group*], [*n*], [*r (GPA, SAT)*],
   [All applicants], [400], [+0.41],
   [Program A: top 30% on combined index], [120], [−0.29],
-  [Program B: top 30% on GPA alone (cutoff GPA ≥ 3.48)], [123], [+0.13],
+  [Program B: top 30% on GPA alone (cutoff GPA ≥ 3.48)], [123], [+0.12],
 )
 
 Program B has 123 admits rather than 120 because of ties at the 3.48 cutoff. Pool summary: GPA mean 3.31, SD 0.31 (7 values capped at 4.00); SAT mean 1158, SD 152. Stars are at (3.00, 1458) and (4.00, 962). r is computed with the course's `standard_units` / `correlation` definitions.
 
-#note[For a bivariate-normal pool with ρ = 0.4, the *expected* values are about −0.24 (index cutoff, top 30%) and +0.22 (GPA-only cutoff). This sample's −0.29 and +0.13 differ by ordinary sampling variation with n ≈ 120. Use the sample values in class; the expected values are only a sanity check. The sign flip requires a fairly selective cutoff: admitting the top 50% gives an expected r of only about −0.08.]
+#note[For a bivariate-normal pool with ρ = 0.4, the *expected* values are about −0.24 (index cutoff, top 30%) and +0.22 (GPA-only cutoff). This sample's −0.29 and +0.12 differ by ordinary sampling variation with n ≈ 120. Use the sample values in class; the expected values are only a sanity check. The sign flip requires a fairly selective cutoff: admitting the top 50% gives an expected r of only about −0.08.]
 
 == Q1 -- the cutoff
 
@@ -67,7 +67,7 @@ The trade-off is created by the selection rule, not by students. In the full poo
 
 == Q4 -- one-variable cutoff (cut first)
 
-Positive but weaker (+0.13 here). Cutting on GPA alone narrows GPA's range, which shrinks r (restriction of range), but it doesn't force any trade-off, so there is no sign flip. Point students at the vertical cutoff in Reveal B: the admitted cloud is a narrow vertical strip with the same upward tilt as before, just harder to see.
+Positive but weaker (+0.12 here). Cutting on GPA alone narrows GPA's range, which shrinks r (restriction of range), but it doesn't force any trade-off, so there is no sign flip. Point students at the vertical cutoff in Reveal B: the admitted cloud is a narrow vertical strip with the same upward tilt as before, just harder to see.
 
 #align(center)[#image("fig_reveal_B.png", width: 62%)]
 
