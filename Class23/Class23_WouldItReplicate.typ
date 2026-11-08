@@ -232,6 +232,15 @@ the plot and table only; you do not need to read the code.
 #v(0.15cm)
 #h(0.6cm) One survey's interval and p-value disagree about whether there is a difference. Which? #blank(width: 1.2cm)
 
+#question[
+  For that survey, compare its observed difference with the cutoff you wrote in question 7. The
+  p-value judged the survey against surveys of a creek with _no_ excess, built with the creek's
+  true SD. The interval used only that survey's own 24 sites. Explain how the two can disagree.
+]
+
+#answer-space(height: 1.8cm)
+
+#block(breakable: false)[
 == Part 7 --- A Very Big Survey
 
 Look at the screen. A different creek has a conductivity logger on each side of its outfall:
@@ -254,6 +263,7 @@ Look at the screen. A different creek has a conductivity logger on each side of 
 #h(0.6cm) #blank(width: 14.5cm)
 #v(0.3cm)
 #h(0.6cm) #blank(width: 14.5cm)
+]
 
 #block(breakable: false)[
 #question[

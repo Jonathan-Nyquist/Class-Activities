@@ -6,6 +6,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
+plt.rcParams.update({'figure.facecolor': 'white', 'axes.facecolor': 'white', 'savefig.facecolor': 'white'})
 
 OUT = '../'
 SD, N, TRUE = 40, 20000, 2

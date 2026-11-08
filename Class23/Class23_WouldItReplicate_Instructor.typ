@@ -77,11 +77,11 @@ _Perspectives on Psychological Science_ 3(4):286–300.
   [Part 3], [7], [Pairs at 10 then 1000; Q5 prediction; fill the filter; Q6; cutoff; Q7. Replication slide.],
   [Part 4], [12], [Assign sites per side; 4.1–4.2; Q8 prediction; 4.3 at 10 then 1000; teams post to the board; Q9.],
   [Part 5], [7], [Q10 table from board numbers; Q11; recap slide.],
-  [Part 6], [3], [Run the prebuilt cell; Q12.],
+  [Part 6], [5], [Run the prebuilt cell; Q12 and its follow-up.],
   [Part 7], [7], [Three slides, a prediction before each; Q13.],
   [Close], [3], [Q14 out loud; return to the board numbers from Q1.],
 )
-That is 48 planned minutes against 75. Your class runs long, so plan on using the slack.
+That is 50 planned minutes against 75. Your class runs long, so plan on using the slack.
 
 #warn[Never cut Part 3; it carries the answer to Q1. If short on time, cut in this order: Part 6
 (show the twenty-survey plot on screen for one minute instead), then Q9 (fold it into the board
@@ -246,13 +246,46 @@ team's own null, so they differ in about the third decimal place. Values below u
 ]
 
 #ans[12][Contain 33: *19* (survey 4 misses). p < 0.05: *11*. Entirely above 0: *12*. The disagreement
-is *survey 20*: its interval [1.7, 54.0] excludes 0, but p ≈ 0.09.]
+is *survey 20*: its interval [1.7, 54.0] excludes 0, but p ≈ 0.09.
+
+_Follow-up:_ survey 20's difference, 27.7 mg/L, is below the 32 mg/L cutoff, so the test calls it
+not significant. The test's cutoff comes from the creek's true SD and is the same for every survey.
+The interval sees only survey 20's 24 sites, which happened to be less spread out than the creek
+(sample SDs 30.6 upstream and 37.0 downstream, against a true 40). So its half-width is only about
+26 mg/L, and the interval just clears 0. Accept any answer that names the two different sources of
+spread: the model's true SD versus this sample's own spread.]
 
 #warn[*Survey 20, and why CIs and p disagree here.* With n = 12 the percentile bootstrap runs
 narrow. Over 4,000 simulated surveys its 95% intervals covered 33 only *92.1%* of the time; median
 width 60.0 mg/L against 64.0 from normal theory with the known SD. Intervals exclude 0 in 57.9% of
 surveys while p < 0.05 occurs in 53.7%, and the two calls disagree in *9.3%*. So "interval excludes
-0 ⇔ p < 0.05" is only approximate here; don't present it as exact.]
+0 ⇔ p < 0.05" is only approximate here; don't present it as exact.
+
+If a student asks whether a permutation test (Class 15) would fix this: no. A permutation p-value
+paired with the same bootstrap intervals still disagreed in *8.9%* of 3,000 surveys (10.9% for the
+known-SD null in the same run). The test spreads under "no excess" by pooling both sides; the interval
+resamples each side around the observed difference. They answer different questions, so they
+disagree near the cutoff (`_scratch/verify_perm_vs_boot.py`).]
+
+#note[*Can students use a CI instead of a permutation test?* Approximately: "0 outside the 95%
+bootstrap interval ⇒ the means differ at about the 5% level." Inferential Thinking presents this method,
+and the interval also gives the size of the difference. The approximation is poor with small samples.
+In this creek (SD 40), with *no* real difference, the CI rule raised a false alarm in 11.2% of surveys at
+6 sites per side, 8.0% at 12, 6.2% at 24 and 6.6% at 48 (4,000 surveys each). The permutation test stayed
+at 5.0–5.9%. With a true difference of 2 standard errors at every size, the two verdicts disagreed in
+17% of surveys at 6 sites, 8.5% at 12, 4.8% at 24 and 3.7% at 48 (2,000 each), nearly always in the
+direction "interval says different, test doesn't." The cause is the percentile bootstrap: a small
+sample understates its population's spread, so the interval runs narrow. Survey 20 is that case.
+The textbook's duality is still correct: "reject if x is outside the 95% CI" is exact by construction, and
+it rejects a true null 5% of the time whenever the interval really covers 95%; the percentile bootstrap
+only approximately does. A bias-corrected (BCa) interval does not fix this, because these data have no
+bias or skew to correct (11.4% false alarms at 6 sites, 7.0% at 12), whereas a bootstrap-t or Welch t
+interval accounts for the uncertain spread and holds about 5% at every size
+(`_scratch/verify_ci_methods.log`).
+Guidance for students: with roughly 20 or more per group, testing with the interval is fine and more
+informative; with fewer, use the permutation test for the yes/no question and read the interval as a
+somewhat-too-narrow estimate of size. Either way, a borderline result is reported as borderline. Scripts:
+`_scratch/verify_perm_vs_boot_byN.log`, `_scratch/verify_ci_false_alarm.log`.]
 
 #part-heading([Part 7. A Very Big Survey (slides)], minutes: 7)
 
